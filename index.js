@@ -26,8 +26,8 @@ const address= `${question} +" "+ 请告诉哪个是公司名字，公司税号�
 openai.createCompletion({
         model: "text-davinci-003",
         prompt: address,
-        max_tokens: 1000,
-        temperature: 0,
+        max_tokens: 1500,
+        temperature:0.7,
     }).then((response)=>{
         console.log(response?.choices?.[0]?.text);
         return response?.data?.choices?.[0]?.text;
